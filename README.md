@@ -67,10 +67,10 @@ You can find the full key at https://keybase.io/zlatinb
 
 
 [Default I2CP port]: https://geti2p.net/en/docs/ports
-[Wiki]: https://github.com/zlatinb/muwire/wiki
+[Wiki]: https://github.com/danrobi11/muwire/wiki
 [doc]: https://github.com/zlatinb/muwire/tree/master/doc
-[muwire-pkg]: https://github.com/zlatinb/muwire-pkg 
-[Packaging]: https://github.com/zlatinb/muwire/wiki/Packaging
+[muwire-pkg]: https://github.com/danrobi11/muwire-pkg 
+[Packaging]: https://github.com/danrobi11/muwire/wiki/Packaging
 [cli options]: https://github.com/zlatinb/muwire/wiki/CLI-Configuration-Options
 [I2P Github]: https://github.com/i2p/i2p.i2p
 [Plugin]: https://github.com/zlatinb/muwire/wiki/Plugin
