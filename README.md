@@ -52,7 +52,7 @@ MuWire is available as a Docker image.  For more information see the [Docker] pa
 If you want to help translate MuWire, instructions are on the wiki [Translate] page.
 
 ## Creating your own MuWire network
-If you want to create your own MuWire network instructions are on the Wiki page.
+If you want to create your own MuWire network instructions are on the [Wiki] page.
 
 ## Related Projects
 ### MuWire Tracker Daemon
