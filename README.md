@@ -1,84 +1,46 @@
-The GitHub repo is mirrored from the in-I2P GitLab repo.  Please open PRs and issues at http://git.idk.i2p/zlatinb/muwire
-
-# MuWire - Easy Anonymous File-Sharing
-
-MuWire is a file publishing and networking tool that protects the identity of its users by using I2P technology. Anyone with a desktop computer and an internet connection can create a unique anonymous online persona and publish information of any kind without fear of censorship or persecution.
-
-Users can then use their MuWire identities to publish files, search for files published by others, subscribe to each other’s publications and communicate through chat and messaging. Furthermore, users can establish trust-based relationship with each other where they assign a “trust level” to their contacts. 
-
-The current stable release - 0.8.3 is avaiable for download at https://muwire.com.  The latest plugin build and instructions how to install the plugin are available inside I2P at http://muwire.i2p.  MuWire works on any platform Java works on, including Windows, MacOS, Linux, Rapsberry Pi. 
-
-You can find technical documentation in the [doc] folder.  Also check out the [Wiki] for various other documentation.
-
-## Building
-
-You need JDK 9 or newer.  After installing that and setting up the appropriate paths, just type
-
-```
-./gradlew clean assemble
-```
-
-If you want to run the unit tests, type
-```
-./gradlew clean build
-```
-
-If you want to build binary bundles that do not depend on Java or I2P, see the [muwire-pkg] project.  If you want to package MuWire for a Linux distribution, see the [Packaging] wiki page.
-
-## Running the GUI
-
-Type
-```
-./gradlew gui:run
-```
-
-The setup wizard will ask you for the host and port of an I2P or I2Pd router.
-
-## Running the Web UI / Plugin
-
-There is a Web-based UI under development.  It is intended to be run as a plugin to the Java I2P router.  Instructions how to build it are available at the wiki [Plugin] page.
-
-## Running the CLI
-
-Look inside `cli-lanterna/build/distributions`.  Untar/unzip one of the `shadow` files and then run the jar contained inside by typing `java -jar cli-lanterna-x.y.z-all.jar` in a terminal.  The CLI options are documented here [cli options]
-
-The CLI is in maintenance mode and will not be getting any new features.
-
-## Docker
-
-MuWire is available as a Docker image.  For more information see the [Docker] page.
-
-## Translations
-If you want to help translate MuWire, instructions are on the wiki [Translate] page.
-
-## Creating your own MuWire network
-If you want to create your own MuWire network instructions are on the [Wiki] page.
-
-## Related Projects
-### MuWire Tracker Daemon
-The MuWire Tracker Daemon (or mwtrackerd for short) is a project to bring functionality similar to BitTorrent tracking to MuWire.  For more info see the [Tracker] page.
-### MuCats
-MuCats is a project to create a website for hosting hashes of files shared on the MuWire network.  For more info see the [MuCats] project.
-
-## GPG Fingerprint
-
-```
-471B 9FD4 5517 A5ED 101F  C57D A728 3207 2D52 5E41
-```
-
-You can find the full key at https://keybase.io/zlatinb
+<div class="Box-body px-5 pb-5">
+        <article class="markdown-body entry-content container-lg" itemprop="text"><p>The GitHub repo is mirrored from the in-I2P GitLab repo.  Please open PRs and issues at <a href="http://git.idk.i2p/zlatinb/muwire" rel="nofollow">http://git.idk.i2p/zlatinb/muwire</a></p>
+<h1><a id="user-content-muwire---easy-anonymous-file-sharing" class="anchor" aria-hidden="true" href="#muwire---easy-anonymous-file-sharing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>MuWire - Easy Anonymous File-Sharing</h1>
+<p>MuWire is a file publishing and networking tool that protects the identity of its users by using I2P technology. Anyone with a desktop computer and an internet connection can create a unique anonymous online persona and publish information of any kind without fear of censorship or persecution.</p>
+<p>Users can then use their MuWire identities to publish files, search for files published by others, subscribe to each other’s publications and communicate through chat and messaging. Furthermore, users can establish trust-based relationship with each other where they assign a “trust level” to their contacts.</p>
+<p>The current stable release - 0.8.3 is avaiable for download at <a href="https://muwire.com" rel="nofollow">https://muwire.com</a>.  The latest plugin build and instructions how to install the plugin are available inside I2P at <a href="http://muwire.i2p" rel="nofollow">http://muwire.i2p</a>.  MuWire works on any platform Java works on, including Windows, MacOS, Linux, Rapsberry Pi.</p>
+<p>You can find technical documentation in the <a href="https://github.com/zlatinb/muwire/tree/master/doc">doc</a> folder.  Also check out the <a href="https://github.com/zlatinb/muwire/wiki">Wiki</a> for various other documentation.</p>
+<h2><a id="user-content-building" class="anchor" aria-hidden="true" href="#building"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Building</h2>
+<p>You need JDK 9 or newer.  After installing that and setting up the appropriate paths, just type</p>
+<pre><code>./gradlew clean assemble
+</code></pre>
+<p>If you want to run the unit tests, type</p>
+<pre><code>./gradlew clean build
+</code></pre>
+<p>If you want to build binary bundles that do not depend on Java or I2P, see the <a href="https://github.com/zlatinb/muwire-pkg">muwire-pkg</a> project.  If you want to package MuWire for a Linux distribution, see the <a href="https://github.com/zlatinb/muwire/wiki/Packaging">Packaging</a> wiki page.</p>
+<h2><a id="user-content-running-the-gui" class="anchor" aria-hidden="true" href="#running-the-gui"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Running the GUI</h2>
+<p>Type</p>
+<pre><code>./gradlew gui:run
+</code></pre>
+<p>The setup wizard will ask you for the host and port of an I2P or I2Pd router.</p>
+<h2><a id="user-content-running-the-web-ui--plugin" class="anchor" aria-hidden="true" href="#running-the-web-ui--plugin"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Running the Web UI / Plugin</h2>
+<p>There is a Web-based UI under development.  It is intended to be run as a plugin to the Java I2P router.  Instructions how to build it are available at the wiki <a href="https://github.com/zlatinb/muwire/wiki/Plugin">Plugin</a> page.</p>
+<h2><a id="user-content-running-the-cli" class="anchor" aria-hidden="true" href="#running-the-cli"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Running the CLI</h2>
+<p>Look inside <code>cli-lanterna/build/distributions</code>.  Untar/unzip one of the <code>shadow</code> files and then run the jar contained inside by typing <code>java -jar cli-lanterna-x.y.z-all.jar</code> in a terminal.  The CLI options are documented here <a href="https://github.com/zlatinb/muwire/wiki/CLI-Configuration-Options">cli options</a></p>
+<p>The CLI is in maintenance mode and will not be getting any new features.</p>
+<h2><a id="user-content-docker" class="anchor" aria-hidden="true" href="#docker"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Docker</h2>
+<p>MuWire is available as a Docker image.  For more information see the <a href="https://github.com/zlatinb/muwire/wiki/Docker">Docker</a> page.</p>
+<h2><a id="user-content-translations" class="anchor" aria-hidden="true" href="#translations"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Translations</h2>
+<p>If you want to help translate MuWire, instructions are on the wiki <a href="https://wiki.localizationlab.org/index.php/MuWire" rel="nofollow">Translate</a> page.</p>
+<h2><a id="user-content-creating-your-own-muwire-network" class="anchor" aria-hidden="true" href="#creating-your-own-muwire-network"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Creating your own MuWire network</h2>
+<p>If you want to create your own MuWire network instructions are on the <a href="https://github.com/zlatinb/muwire/wiki">Wiki</a>.</p>
+<h2><a id="user-content-related-projects" class="anchor" aria-hidden="true" href="#related-projects"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>Related Projects</h2>
+<h3><a id="user-content-muwire-tracker-daemon" class="anchor" aria-hidden="true" href="#muwire-tracker-daemon"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>MuWire Tracker Daemon</h3>
+<p>The MuWire Tracker Daemon (or mwtrackerd for short) is a project to bring functionality similar to BitTorrent tracking to MuWire.  For more info see the <a href="https://github.com/zlatinb/muwire/wiki/Tracker-Daemon">Tracker</a> page.</p>
+<h3><a id="user-content-mucats" class="anchor" aria-hidden="true" href="#mucats"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>MuCats</h3>
+<p>MuCats is a project to create a website for hosting hashes of files shared on the MuWire network.  For more info see the <a href="https://github.com/zlatinb/mucats">MuCats</a> project.</p>
+<h2><a id="user-content-gpg-fingerprint" class="anchor" aria-hidden="true" href="#gpg-fingerprint"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a>GPG Fingerprint</h2>
+<pre><code>471B 9FD4 5517 A5ED 101F  C57D A728 3207 2D52 5E41
+</code></pre>
+<p>You can find the full key at <a href="https://keybase.io/zlatinb" rel="nofollow">https://keybase.io/zlatinb</a></p>
+</article>
+      </div>
+  </div>
 
 
-[Default I2CP port]: https://geti2p.net/en/docs/ports
-[Wiki]: https://github.com/danrobi11/muwire/wiki
-[doc]: https://github.com/zlatinb/muwire/tree/master/doc
-[muwire-pkg]: https://github.com/danrobi11/muwire-pkg 
-[Packaging]: https://github.com/danrobi11/muwire/wiki/Packaging
-[cli options]: https://github.com/zlatinb/muwire/wiki/CLI-Configuration-Options
-[I2P Github]: https://github.com/i2p/i2p.i2p
-[Plugin]: https://github.com/zlatinb/muwire/wiki/Plugin
-[Docker]: https://github.com/zlatinb/muwire/wiki/Docker
-[Translate]: https://wiki.localizationlab.org/index.php/MuWire
-[jlesage/docker-baseimage-gui]: https://github.com/jlesage/docker-baseimage-gui
-[Tracker]: https://github.com/zlatinb/muwire/wiki/Tracker-Daemon
-[MuCats]: https://github.com/zlatinb/mucats
+</div>
